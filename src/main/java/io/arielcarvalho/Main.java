@@ -16,7 +16,10 @@ public class Main {
    }
 
    @GetMapping("/greet")
-   public String greet() {
-       return "Hello there!";
+   public GreetResponse greet() {
+       // return "Hello there!";
+       return new GreetResponse("Hello");
    }
+
+   record GreetResponse(String greet){}
 }
